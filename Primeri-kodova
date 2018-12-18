@@ -18,7 +18,7 @@ Ovde se nalaze primeri kodova za razlicite slucajeve.
   
   
   
-2) Metoda za prikaz Alet poruke pri kliku na dugme
+2) Metoda za prikaz Alert poruke pri kliku na dugme
 
 //method for showing alert pop-up
     @IBAction func showAlert() {
