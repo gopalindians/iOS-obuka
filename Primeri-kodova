@@ -9,6 +9,7 @@ Ovde se nalaze primeri kodova za razlicite slucajeve.
         hitMeButton.setTitle("Cao Bane", for: .normal)
         hitMeButton.setTitleColor(.purple, for: .normal)
         hitMeButton.setTitleColor(.green, for: .highlighted)
+        hitMeButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5) . /ovako se setuje margina oko teksta unutar dugmeta
         
   Takodje, pre toga je potrebno deklarisati dato dugme odmah u ViiewContolrer klasi, ovako:
   
