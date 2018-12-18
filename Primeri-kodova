@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------
 Ovde se nalaze primeri kodova za razlicite slucajeve.
 
-1) Coustimizovanje izgleda dugmeta vrsi se u ViewControler klasi unutar metode viewDidLoad() ispod super.viewDidLoad() poziva
+1) Custimizovanje izgleda dugmeta vrsi se u ViewControler klasi unutar metode viewDidLoad() ispod super.viewDidLoad() poziva
 
         hitMeButton.layer.cornerRadius = 4
         hitMeButton.layer.borderColor = UIColor.black.cgColor
@@ -10,7 +10,12 @@ Ovde se nalaze primeri kodova za razlicite slucajeve.
         hitMeButton.setTitleColor(.purple, for: .normal)
         hitMeButton.setTitleColor(.green, for: .highlighted)
         hitMeButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5) . /ovako se setuje margina oko teksta unutar dugmeta
+        hitMeButton.backgroundColor = UIColor.gray
         
   Takodje, pre toga je potrebno deklarisati dato dugme odmah u ViiewContolrer klasi, ovako:
   
   @IBOutlet weak var hitMeButton: UIButton!
+  
+  
+  
+2) 
