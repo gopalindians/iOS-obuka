@@ -39,6 +39,11 @@ Ovde se nalaze primeri kodova za razlicite slucajeve.
    Pre nego sto se ono gore pozove, moramo da deklarisemo varijablu:
         var targetValue = 0
    ali ovo nije uvek neophodno.
+   Takodje nekada zavisno od vrste Xcode-a i verzije iOS-a umesto gornje komande trebamo upotrebiti ovu:
+   
+        targetValue = Int(arc4random_uniform(100)) + 1
+        
+   Rezultat je isti, samo sto kompajler u starijim verzijama Xcode-a nema random() metodu.
    
 ----------------------------------------------------------
 4) Za prikazivanje vrednosti u labelama:
