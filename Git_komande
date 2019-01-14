@@ -1,0 +1,144 @@
+Git commands
+
+
+
+1. . file can be seen by cat .gitconfig
+2. it is possible to install git autocomplete from GitHub
+
+Help 
+
+1.  git help 		: see git functions\
+2.. git help log	: see git log function help
+
+General 
+
+1. ls	          	: view files
+2. ls 	-la	 	: view hidden files	
+3. ls -la .git 	: you can only edit config file from .git 
+
+Work
+
+git init     				:  init git file in directory to track changes in that directory
+
+git add .  				: “add .” add all changes in entire project to staged index (in order to track files otherwise they are in working directory but not staged)
+
+git commit -m “message”   : commit stage files to repository (check first with git status)
+
+git commit -am “message” : add all “modified” files and commit it with message * doesn’t work well for deleted and tracked files better use git add. or git add file
+
+git status 				: we can see what is different on repository, stage and working directory
+
+git diff  				: see differences in unstaged files (if there is lot of changes you will see only parts, use Q for quit)
+git diff  —staged 		: see differences in staged files (if there is lot of changes you will see only parts, use Q for quit)
+
+
+Remove files
+
+git rm file1.txt  			: delete file . There are two ways. 1. delete file and than remove it (stays in trash)
+											   2. only remove it from git (vanished) 
+											and then commit change  ,  rm  - short for remove 
+Renamed files
+
+git mv file1.txt fileRenamed.txt			used to rename and move files 
+git mv file1.txt directory/file1Renamed.txt		used to move file to new directory
+
+
+Undoing changes
+
+git checkout branchName		: checkout branch
+git checkout —index.html		: checkout file index.html on current branch (get .index.html from repository and change it in working directory)
+git checkout —resources		: checkout folder on current branch
+
+git checkout 26fdasrjhdasjdas —resources.html		: checkout previous commit of a file to take back changes from commits before that one 
+
+git revert 25324432yhfs73223   : revert all changes from commit (25324432yhfs73223 is hash of commit). Use for last commit or  .If we want to revert some complicated change from earlier better to use merge.
+
+git reset HEAD file			: unstage file - usually done (when we want to unstage file before commit )
+
+git commit —amend “Message”  : add changes to last commit (use when you do not need to add new commit but add changes to last commit) only possible to change LAST commit; before amend first you need to stage changes. (add)
+
+
+RESET is always moving HEAD pointer
+// always save in text files last hashs so you can return back if you want ( reset with newest hash )
+
+git reset - soft 321538712ndkjasd131 	: move head, changes stay staged and in working directory, you can see diff 
+git reset - mixed 321538712ndkjasd131 	: move head, changes not staged and in working directory
+git reset - hard 321538712ndkjasd131 	: move head, changes not staged and not in working directory
+
+Remove unstaged files 
+
+git clean -n   : show which file are going to be removed
+git clean -f    : remove untracked files (permanently deleted) 
+
+Log
+
+ git log 					: see all commits
+ git log -n 3				: see last 3 commits
+ git log —since=2017-05-16	: see commits since date
+ git log —until=2017-05-16		: see commits until date
+ git log —author=“Iva” 		: see commits from author
+ git log —grep=“Init”			: see all commits whit init in message
+ git log HEAD 				: see all commits in HEAD(pointer to last commit in current branch )
+
+
+Branches // it is possible to set git configuration to always show branch in terminal
+
+git branch 					: use to see which branches do you have
+
+git branch name			: create new branch; best to use only letters, underscore and numbers
+
+git checkout branch_name 	: HEAD points to last commit on checkout branch; working directory changes and have data of last commit in that branch
+
+git checkout -b  branch_name	 :  create and checkout new branch
+
+git diff branch_name1.. branch_name2 	: get difference between branches
+git diff branch_name1.. branch_name2^ 	: get difference between branch1 and previous(parent) commit of branch2  (^ - parent , ^^ - grandparent, also another way  ~1 - parent ~2 - grandparent)
+
+git diff —color_words branch_name1.. branch_name2 	: get difference between branches; difference is in same line 
+
+git branch —merged   							: shows which branches have their HEAD in current branch 
+
+git branch -m new_feature seo_title 					: used to rename branch
+
+git branch -d branch_name  						: used to delete branch  
+
+
+Merging of branches (checkout the branch to which you want to add changes and then)
+
+git merge branch_name 	: if there is conflict it will be master | MERGING (solve conflicts and commit ) git commit then can be without message because it is automatically added
+
+
+git merge —abort    		: if brach is in merging state
+
+
+git log —graph —online —all —decorate 	: to graphically see branches and merging points
+
+
+
+
+
+Pq
+
+- git add .
+	•	git commit -m “Message
+	•	git checkout develop  // go to online branch
+	•	git pull
+	•	git checkout tmp // local branch to which we want to add changes
+	•	git rebase develop // srediti merge conflict  (xcodeproject - show content , project.pbxproj aka ima problem , aka ima po failovima Honda tamo)
+	•	git add . (Ako treba)
+	•	git rebase —continue
+	•	uraditi commit… pa onda ako niko nije nista pushovao 
+- git checkout develop
+	•	git merge tmp
+	•	git push
+
+
+
+
+Ako su izmene radjene na develop grani umesto na temp
+
+- git stash
+-git checkout temp
+ - git pop stash
+
+ - git rebase —continue
