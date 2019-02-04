@@ -70,3 +70,6 @@ PROJEKAT NOVI ZESIUM:
 
 https://projects.invisionapp.com/share/4KPVDWMUYEQ#/screens/340401475
 --------------------------------------------------------------------------------------------------------
+Kako da promenis inicijalni ViewController Storyboard da ne bude prvi Main.storyboard pri startovanju aplik.:
+
+https://stackoverflow.com/questions/36677127/how-to-change-the-initial-view-controller-of-storyboard
