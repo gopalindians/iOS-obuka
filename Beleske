@@ -1,0 +1,30 @@
+**************************************************************************************************
+Ovde se nalaze beleske za bagove koje sam pronalazio i ispravljao:
+
+1) Bag sa gubljenjem konekcije sa web socketom.
+
+didCloseWithCode 1001, reason: Optional("Stream end encountered")
+"Socket disconected"
+
+Ovo je bio bag sa gubljenjm konekcje sa web socketom, kada se desavalo da se web socket sam od sebe diskonektuje odjednom, bez ikakvog razloga posle 1-2 minuta.
+
+Resenje je bilo da se u metodi koja se pozove da bi prekinula konekciju:
+
+// Disconnection method
+    func stompClientDidDisconnect(client: StompClientLib!) {
+        debugPrint("Socket disconected")
+        socketClient.unsubscribeFromAllTopics()
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: Constants.webSocketURL),
+                                                delegate: self)
+    }
+    
+Ubaci se deo koda:
+
+socketClient.openSocketWithURLRequest(request: NSURLRequest(url: Constants.webSocketURL),
+                                                delegate: self)
+                                            
+koji ponovo uspostavi konekciju sa web socektima sam za sve i klijent i drajvera.
+**************************************************************************************************
+
+
+
