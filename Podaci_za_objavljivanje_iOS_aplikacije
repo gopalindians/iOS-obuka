@@ -1,0 +1,17 @@
+Podaci koji su potrebni kada se uploda-uje aplikacija na App Stoer za iOS aplikaciju:
+
+
+1. Description - na svim jezicima,
+2. Privacy Policy URL,
+3. Subtitle - "A summary of your app that appears below your app name throughout the App Store in iOS 11 or later and the Mac App Store in macOS Mojave or later.",
+4. Primary i Secundary category - koje su,
+5. Keywords,
+6. Marketing URL - opciono,
+7. Support URL - ovo mora,
+8. Copyright,
+9. Ime cije stavljamo za vlasnika FleatyAB-a,
+10. Neka 2 account-a (driver i client),
+11. Promotional text - Promotional text lets you inform your App Store visitors of any current app features without requiring an updated submission. This text will appear above your description on the App Store for customers with devices running iOS 11 or later, and macOS 10.13 or later.".
+12. Screenshots - za sve sto hoces da bude prikazano.
+Ovo j sve potrebno da se prvo pripremi pre nego sto objavimo aplikaciju na Store-u.
+
