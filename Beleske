@@ -25,6 +25,79 @@ socketClient.openSocketWithURLRequest(request: NSURLRequest(url: Constants.webSo
                                             
 koji ponovo uspostavi konekciju sa web socektima sam za sve i klijent i drajvera.
 **************************************************************************************************
+Primeri za enume koji su zamenili if - else petlju:
 
 
+import UIKit
 
+enum ReportImageView: String {
+    case topImage
+    case bottomImage
+}
+
+class NewReportViewController: UIViewController {
+
+    // MARK: - Properties
+    lazy var imagePicker = UIImagePickerController()
+    var topImage = false
+    var bottomImage = false
+    var windowPosition: ReportImageView! = ReportImageView(rawValue: "")
+
+    var presenter: NewReportPresenter!
+    var newReportView: NewReportView! {
+        loadViewIfNeeded()
+        return view as? NewReportView
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+————————————————————————————————————————
+
+   @objc private func fishButtonTapped(recognizer: UITapGestureRecognizer) {
+        debugPrint("Fish button tapped")
+//            topImage = true
+//            bottomImage = false
+            windowPosition = .topImage
+            actionSheetHandler()
+    }
+
+    @objc private func manButtonTapped(recognizer: UITapGestureRecognizer) {
+        debugPrint("Man button tapped")
+//            bottomImage = true
+//            topImage = false
+            windowPosition = .bottomImage
+            actionSheetHandler()
+    }
+
+------------------------------------------------------------------------------------
+          let image = resizeImage(image: chosenImage, targetSize: CGSize(width: 100, height: 100))
+
+//            let windowPosition: ReportImageView! = ReportImageView(rawValue: "")
+
+            switch windowPosition {
+            case .topImage?:
+                self.newReportView.newCatchRollerImageView.image = image
+                newReportView.fishButton.isHidden = false
+                newReportView.uploadPhotoTopImageView.isHidden = true
+                newReportView.uploadPhotoLabelTop.isHidden = true
+            case .bottomImage?:
+                self.newReportView.newCatchManImageView.image = image
+                newReportView.manButton.isHidden = false
+                newReportView.uploadPhotoBottomImageView.isHidden = true
+                newReportView.uploadPhotoLabelBottom.isHidden = true
+            default: break
+            }
+
+//            if  topImage {
+//                self.newReportView.newCatchRollerImageView.image = image
+//                newReportView.fishButton.isHidden = false
+//                newReportView.uploadPhotoTopImageView.isHidden = true
+//                newReportView.uploadPhotoLabelTop.isHidden = true
+//            } else if bottomImage {
+//                self.newReportView.newCatchManImageView.image = image
+//                newReportView.manButton.isHidden = false
+//                newReportView.uploadPhotoBottomImageView.isHidden = true
+//                newReportView.uploadPhotoLabelBottom.isHidden = true
+//            }
+
+**************************************************************************************************
