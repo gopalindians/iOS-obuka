@@ -41,7 +41,7 @@ class NewReportViewController: UIViewController {
     lazy var imagePicker = UIImagePickerController()
     var topImage = false
     var bottomImage = false
-    var windowPosition: ReportImageView! = ReportImageView(rawValue: "")
+    var windowPosition: ReportImageView! = ReportImageView(rawValue: "")      <--- Ovo sam morao ovako da raspakujem da bi program radio
 
     var presenter: NewReportPresenter!
     var newReportView: NewReportView! {
