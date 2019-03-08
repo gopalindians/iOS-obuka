@@ -101,3 +101,21 @@ class NewReportViewController: UIViewController {
 //            }
 
 **************************************************************************************************
+Unwrapping of Optionals:
+
+1. Nacin - nisam sigaran jel ispravan
+// iconImageView.image = UIImage(named: presenter.tutorialModel.tutorialIconImage ?? "")
+
+2. Nacin - mislim da je ovaj ispravan i tako sam i uradio
+ if let image = presenter.tutorialModel.tutorialIconImage {
+            iconImageView.image = UIImage(named: image)
+        }
+
+
+
+
+//        if image = UIImage(named: presenter.tutorialModel.tutorialImage) {
+//            contentImageView.image = image
+//        }
+**************************************************************************************************
+
