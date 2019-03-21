@@ -118,4 +118,13 @@ Unwrapping of Optionals:
 //            contentImageView.image = image
 //        }
 **************************************************************************************************
+Kada hocu da dobro ubacim sliku da se upasuje dobro da ne vriri okolo a da ne bude razvucena:
 
+ profileBackgroundImageView.contentMode = .scaleAspectFill
+ profileBackgroundImageView.clipsToBounds = true
+        
+ **************************************************************************************************
+ 
+ 
+ 
+ 
