@@ -115,5 +115,9 @@ https://developer.apple.com/library/archive/documentation/DeveloperTools/Concept
 
 -------------------------------------------------------------------------------------------------------------
 
+Za stavljanje notifikacija u Foreground:
+
+https://stackoverflow.com/questions/39713605/getting-local-notifications-to-show-while-app-is-in-foreground-swift-3/39715402#39715402
+
 
 
