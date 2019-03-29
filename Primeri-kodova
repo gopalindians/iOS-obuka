@@ -66,16 +66,17 @@ Ovde se nalaze primeri kodova za razlicite slucajeve.
         }
  
  ----------------------------------------------------------
- 6) Link za materijale sa Stanforda:
+ 6) Metoda za implementiranje swipe-to-delete funkcionalnosti na TableView listi
  
- https://drive.google.com/drive/folders/1-TWZDChwwzkiGzt78QlPZDzN-j82JfR6
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
  
- ----------------------------------------------------------
- 7) 
- 
- 
- 
-        
+ -----------------------------------------------------------      
 
 
 
