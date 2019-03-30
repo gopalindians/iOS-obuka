@@ -123,6 +123,13 @@ Kada hocu da dobro ubacim sliku da se upasuje dobro da ne vriri okolo a da ne bu
  profileBackgroundImageView.contentMode = .scaleAspectFill
  profileBackgroundImageView.clipsToBounds = true
         
+***************************************************************************************************
+ Kada hocu da mi se otvori tastatura na simulatoru, pri kliku na text field, treba kada se ukljuci
+ simulator da idem gore na sledece opcije:
+ 
+ Hardvare -> Keyboard ->Toggle Software Keyboard 
+ 
+ i tada treba da stikliram opciju Toggle Software Keyboard ukoliko nije stiklirana.
  **************************************************************************************************
  
  
