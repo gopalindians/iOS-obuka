@@ -130,8 +130,22 @@ Kada hocu da dobro ubacim sliku da se upasuje dobro da ne vriri okolo a da ne bu
  Hardvare -> Keyboard ->Toggle Software Keyboard 
  
  i tada treba da stikliram opciju Toggle Software Keyboard ukoliko nije stiklirana.
- **************************************************************************************************
+*****************************************************************************************************
+Ovo je bug sa Terms & Conditins ekranom za iPhone SE, kada stranica nece da se ucita od vrha ekrana.
+ 
+Resenje je bilo:
+  Da u ViewController-u koji drzi taj UITextView @IBOutlet, dodam sledecu metodu:
+  
+   override func viewDidLayoutSubviews() {
+        textView.setContentOffset(.zero, animated: false)
+    }
+  
+Ovo sam resio na Fleaty-ju u klasi: TermsAndPrivacyViewController.swift
  
  
+Resenje sam nasao na linku:
  
+ https://stackoverflow.com/questions/1234242/how-do-i-force-a-uitextview-to-scroll-to-the-top-every-time-i-change-the-text
+ 
+*****************************************************************************************************
  
