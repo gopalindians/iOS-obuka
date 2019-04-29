@@ -163,8 +163,25 @@ Resenje sam nasao na linku:
     @objc func dismissKeyboard() {
         inputTextField.resignFirstResponder()
     }
- 3) Trece, ovo je metoda koja ce mi omoguciti dismissovanje ekrana klikom na dugme "Return" na tastaturi telefona.
+ Drugi nacin je primena metode koja ce mi omoguciti dismissovanje ekrana klikom na dugme "Return" na tastaturi telefona.
  
+ 1) Prvo, setujem da mi klasa koja sadrzi TextField koji popunjavam na ekranu, nasledi klasu UITextFieldDelegate, 
+ jer se u njoj nalaze optrebne metode za rad sa tastaturom uredjaja.
+ 
+ 2) Drugo, u metodi viewDidLoad() unsem sledecu liniju kod-a:
+ 
+ inputTextField.delegate = self
+ 
+ 3) Trece, napisem sledecu metodu:
+ 
+  //MARK: - 2. NACIN - Metoda za dismissovanje tastature klikom na dugme "Retturn" na tastaturi uredjaja
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        inputTextField.resignFirstResponder()
+        return true
+    }
+    
+ 
+ *******************************************************************************************************
  
  
  
