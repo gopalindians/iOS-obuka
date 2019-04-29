@@ -182,7 +182,7 @@ Resenje sam nasao na linku:
     
  
  *******************************************************************************************************
- Metoda za setovanje gradijenten pozadine na ekranu:
+ Metoda za setovanje gradijentne pozadine na ekranu:
  
   func setupGradientLayer() {
         let newLayer = CAGradientLayer()
