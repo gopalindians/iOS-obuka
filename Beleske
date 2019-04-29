@@ -118,7 +118,7 @@ Unwrapping of Optionals:
 //            contentImageView.image = image
 //        }
 **************************************************************************************************
-Kada hocu da dobro ubacim sliku da se upasuje dobro da ne vriri okolo a da ne bude razvucena:
+Kada hocu da dobro ubacim sliku da se upasuje dobro da ne viri okolo a da ne bude razvucena:
 
  profileBackgroundImageView.contentMode = .scaleAspectFill
  profileBackgroundImageView.clipsToBounds = true
@@ -148,4 +148,25 @@ Resenje sam nasao na linku:
  https://stackoverflow.com/questions/1234242/how-do-i-force-a-uitextview-to-scroll-to-the-top-every-time-i-change-the-text
  
 *****************************************************************************************************
+ Primer funkcije kojom se setuje spustanje tastature simulatora kada se klikne van TextView polja 
+ kada sam zavrsio sa unosom zeljenih podataka/teksta:
+ 
+1) Prvo, u metodu viewDidLoad() unesem sledecu liniju koda:
+ 
+ self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+ 
+ tako sam dodao GestureRecognizer koji ce prepoznati da sam kliknuo na ekran.
+ 
+ 2) Drugo, pravim metodu koja ce mi koristiti za dismissovanje tatature klikom na ekran telefona.
+ 
+  //MARK: - Metoda za dismissovanje tastature od simulatora tako sto se klikne van tekst polja na ekranu.
+    @objc func dismissKeyboard() {
+        inputTextField.resignFirstResponder()
+    }
+ 3) Trece, ovo je metoda koja ce mi omoguciti dismissovanje ekrana klikom na dugme "Return" na tastaturi telefona.
+ 
+ 
+ 
+ 
+ 
  
