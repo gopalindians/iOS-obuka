@@ -77,6 +77,33 @@ Ovde se nalaze primeri kodova za razlicite slucajeve.
     }
  
  -----------------------------------------------------------      
+1. Nacin - Setovanje footera u TableView-u, (da bude floating button):
 
 
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = ImageTitleButton()
+        footer.contentHorizontalAlignment = .center
+        footer.addTarget(self, action: #selector(addVehicle), for: .touchUpInside)
+        footer.setTitle("+ " + L10n.buttonTitleAddVehicle, for: .normal)
+        return footer
+    }
+
+Ova metoda se stalja u ekstenziju gde mi je UITableViewDelegate (npr: extension VehiclesViewController: UITableViewDelegate)
+
+2. Nacin - Setovanje footer-a u TableView-u (da ne bude floating button, vec da se spusta/skroluje zajedno sa tabelom na ekranu):
+
+func setupFooterButton() {
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+        button.setTitleColor(.black, for: .normal)
+        button.center.x = self.view.center.x
+        button.addTarget(self, action: #selector(addVehicle), for: .touchUpInside)
+        button.setTitle("+ " + L10n.buttonTitleAddVehicle, for: .normal)
+        customView.addSubview(button)
+        self.tableView.tableFooterView = customView
+    }
+    
+  Ovu funkciju treba pozvati u ViewDidLoad() metodi.
+  
+  
 
