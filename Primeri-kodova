@@ -104,6 +104,33 @@ func setupFooterButton() {
     }
     
   Ovu funkciju treba pozvati u ViewDidLoad() metodi.
+  ---------------------------------------------------------------------------------------------
+  Ovakvu funkciju nemoj pisati kao si ovde, onako kao sto si prikazao ispod:
+  
+  1) Ovo ne valja (ovo radi ali ne treba tako):
+  
+  @objc private func deleteButtonHandler() {
+        debugPrint("Delete tapped")
+        if cardData != nil {
+            guard let card = cardData else { return }
+            delegate?.vehiclesTableViewCell(self, deleteCardVehicleAt: card.id)
+        } else if vehicleData != nil {
+            guard let vehicle = vehicleData else { return }
+            delegate?.vehiclesTableViewCell(self, deleteCardVehicleAt: vehicle.id)
+        }
+    }
+    
+   2) Ovako je ispravno:
+   
+    @objc private func deleteButtonHandler() {
+        guard let vehicle = vehicleData else {
+            delegate?.vehiclesTableViewCell(self, deleteCardVehicleAt: cardData?.id ?? 0)
+            return }
+        delegate?.vehiclesTableViewCell(self, deleteCardVehicleAt: vehicle.id)
+    }
+    
+    ---------------------------------------------------------------------------------------------
+    
   
   
 
