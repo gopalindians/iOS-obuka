@@ -192,8 +192,16 @@ Resenje sam nasao na linku:
     }
     
     Nju je dovoljno pozvati u setupUI() metodi kada pravim view, bilo u view bilo u ViewController klasi.
- ******************************************************************************************************
+******************************************************************************************************
+ Za brisanje DerivedData kroz terminal:
  
+The simplest and fastest way is the following (if you have not changed the defaults folder for DerivedData).
+
+Open terminal and past the following:
+
+rm -rf ~/Library/Developer/Xcode/DerivedData
+ 
+******************************************************************************************************
  
  
  
