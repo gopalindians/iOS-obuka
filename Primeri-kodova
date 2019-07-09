@@ -147,6 +147,9 @@ func setupFooterButton() {
     }
     
     A onda ovu metodu assignbackground() pozovem u viewDidLoad() ili setupUI() metodi datog ViewController-a.
+    
+    Primer uzet sa:
+    https://stackoverflow.com/questions/27049937/how-to-set-a-background-image-in-xcode-using-swift
  ------------------------------------------------------------------------------------------------------------
     
   
