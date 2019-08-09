@@ -150,8 +150,23 @@ func setupFooterButton() {
     
     Primer uzet sa:
     https://stackoverflow.com/questions/27049937/how-to-set-a-background-image-in-xcode-using-swift
- ------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+    Zapamti, kada treba da sklonis navigation bar sa Login ekrana ili bilo kog drugog ekrana na kome se ne treba
+    nalaziti navigation bar onda moras ubaciti sledece dve metode:
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true  //Hide
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false  //Show
+    }
+
+
+ Ove metode overrajduju originalne metode aplikacije.
+------------------------------------------------------------------------------------------------------------
+
   
   
 
