@@ -164,7 +164,10 @@ func setupFooterButton() {
     }
 
 
- Ove metode overrajduju originalne metode aplikacije.
+ Ove metode overrajduju originalne metode aplikacije. Ovo mi je jedino pomoglo na Krizi-u.
+ Ovo je pronadjeno na sledecem sajtu:
+ 
+ https://stackoverflow.com/questions/2926914/navigation-bar-show-hide
 ------------------------------------------------------------------------------------------------------------
 
   
