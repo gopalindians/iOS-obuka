@@ -169,7 +169,18 @@ func setupFooterButton() {
  
  https://stackoverflow.com/questions/2926914/navigation-bar-show-hide
 ------------------------------------------------------------------------------------------------------------
+Resenje za slucaj kada se BottomNavigationTabBar zeli sakriti na ekranima na kojima se ide u dubinu, ali se 
+zeli ostaviti vidljivim na prvom ekranu. Tako da se pri vracanju na back nece spustiti i sakriti da se ne vidi.
+  
+  override func viewWillAppear(_ animated: Bool) { // As soon as vc appears
+    super.viewWillAppear(true)
+    self.tabBarController?.tabBar.isHidden = false
+}
 
-  
-  
+override func viewWillDisappear(_ animated: Bool) { // As soon as vc disappears
+    super.viewWillDisappear(true)
+    self.tabBarController?.tabBar.isHidden = true
+}
+
+------------------------------------------------------------------------------------------------------------
 
