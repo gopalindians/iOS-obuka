@@ -1,3 +1,36 @@
+-----------------------------------------------------------------------------------------------------
+Unutar fajla .swiftlint.yml imlementiram ova pravila:
+-----------------------------------------------------------------------------------------------------
+excluded: # do not run swiftlint on pods
+  - Pods
+  - Krizio/Config/Swiftgen
+  - Krizio/AppDelegate/AppDelegate.swift
+variable_name: #exclude variables from naming rules
+  excluded:
+    - vc # variable used by apple internally
+    - id
+    - ID
+    - example
+
+line_length: 120 # set maximum line length
+type_body_length: 480 # set maximum type body length
+
+disabled_rules: # rule identifiers to disable globally
+# all rules: https://github.com/realm/SwiftLint/tree/master/Source/SwiftLintFramework/Rules
+
+custom_rules:
+  dont_use_print: # rule identifier
+    name: "Do not use the default print method" # rule name. optional.
+    regex: 'print\(' # matching pattern
+    match_kinds: # SyntaxKinds to match. optional.
+      - comment
+      - identifier
+    message:'Use debugPrint("File:\(#file), Function:\(#function), Line: \(#line)" + "place param here")' # violation message. optional.
+    severity: error # violation severity. optional.
+ 
+-----------------------------------------------------------------------------------------------------
+Pravila su:
+-----------------------------------------------------------------------------------------------------
 # Rules
 
 * [AnyObject Protocol](#anyobject-protocol)
@@ -184,3 +217,4 @@
 * [XCTest Specific Matcher](#xctest-specific-matcher)
 * [XCTFail Message](#xctfail-message)
 * [Yoda condition rule](#yoda-condition-rule)
+
