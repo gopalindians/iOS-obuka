@@ -98,6 +98,17 @@ https://www.hackingwithswift.com/articles/201/start-the-100-days-of-swiftui
 
 https://www.youtube.com/playlist?list=PLuoeXyslFTuZRi4q4VT6lZKxYbr7so1Mr
 ---------------------------------------------------------------------------------------------------------------
+Za resenje problema sa killed 9 - restartuj komp.
+A ako i posle toga ne mozes da add-ujes ili da commit-ujes fajlove na git, ona je resenje ovo:
+                              rm .git/index.lock
+imas ovde odgovor:
+
+https://stackoverflow.com/questions/38004148/another-git-process-seems-to-be-running-in-this-repository
+---------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
