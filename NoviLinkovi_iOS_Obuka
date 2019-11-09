@@ -105,10 +105,46 @@ imas ovde odgovor:
 
 https://stackoverflow.com/questions/38004148/another-git-process-seems-to-be-running-in-this-repository
 ---------------------------------------------------------------------------------------------------------------
+Za dodavanje tajmera u ViewController koji ce okidati ucitavanje npr., mape, koristim ovo:
+
+if self.isOnScreen {
+            timer = Timer.scheduledTimer(timeInterval: 10.0,
+                                         target: self,
+                                         selector: #selector(refreshChildStatus),
+                                         userInfo: nil,
+                                         repeats: true)
+        }
 
 
+Za iskljucivanje tajmera kada view nije vise vidljiv koristim ovo:
+
+  override func viewDidDisappear(_ animated: Bool) {
+        removeAllAnnotations()
+        timer?.invalidate()
+    }
+    
+ O tome ima u ovom clanku:
+ 
+ https://stackoverflow.com/questions/24007518/how-can-i-use-timer-formerly-nstimer-in-swift
+ ---------------------------------------------------------------------------------------------------------------
+Za proveru da li je viewcontroller vodljiv ili ne, koristimo ovo:
+
+if someViewController.isOnScreen {
+    // Do stuff here
+}
+
+i ovo:
 
 
+extension UIViewController{
+    var isOnScreen: Bool{
+        return self.isViewLoaded() && view.window != nil
+    }
+}
 
+Vise o tome imam ovde:
 
+https://stackoverflow.com/questions/2777438/how-to-tell-if-uiviewcontrollers-view-is-visible
+
+---------------------------------------------------------------------------------------------------------------
 
