@@ -1,4 +1,5 @@
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Auto Layout tutorijal:
 ----------------------
 
@@ -13,6 +14,7 @@ I ovo:
 https://www.twilio.com/blog/2018/05/xcode-auto-layout-swift-ios.html
 
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Za rad sa 'IQKeyboardManager' za podizanje i spustanje tastature telefona kada klikne na textfield:
 ---------------------------------------------------------------------------------------------------
 
@@ -22,6 +24,7 @@ https://www.youtube.com/playlist?list=PL_csAAO9PQ8aTL87XnueOXi3RpWE2m_8v
 
 https://www.youtube.com/watch?v=Aw761SWjxUI&list=PL_csAAO9PQ8aTL87XnueOXi3RpWE2m_8v&index=2&t=0s
 
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Dobar clanci o Dark Modu u iOS aplikacijama:
 --------------------------------------------
@@ -36,6 +39,7 @@ https://nshipster.com/dark-mode/
 
 https://developer.apple.com/videos/play/wwdc2019/214/
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Dodavanje boja u Assetima:
 --------------------------
 
@@ -49,6 +53,7 @@ I za dodavanje slika u Assetima:
 https://developer.apple.com/documentation/uikit/uiimage/providing_images_for_different_appearances
 
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 O SF Symbols biblioteci sa simbolima za aplikacije:
 --------------------------------------------------
 
@@ -58,17 +63,20 @@ https://developer.apple.com/videos/play/wwdc2019/206/
 
 Instaliraj je na svoj Mac, obavezno danas: 31.11.2019.
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Za pravljenje raznih oblika oko slika Heksaugao, Okagon ... :
 -------------------------------------------------------------
 
 https://www.youtube.com/watch?v=xfrrZfbxFb0
 
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 O trazenju dozvole korisnika za lokaciju:
 -----------------------------------------
 
 https://zonneveld.dev/ios-13-prepare-your-app-for-the-allow-once-location-permission/
 
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Za resavanje problema sa .DS_store fajlom, instaliraj sledeci projekat i uradi ostalo po uputstvu:
 ------------------------------------------
@@ -77,12 +85,19 @@ https://github.com/JK3Y/asepsis
 
 https://apple.stackexchange.com/questions/340585/ds-store-removal-permanent-way-of-stopping-its-creation-on-mojave
 
+Generalno, resenje koje sam upotrebi na KrizioSimulation je:
+
+You can use find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch to 
+remove all .DS_Stores from the repository.
+
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Za Lokalizaciju iOS aplikacije:
 -------------------------------
 
 https://www.youtube.com/watch?v=IPt7cZrHGz8
 
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Mislim da je ovo najbolji Tutorijal za kreiranje Launch screen-a (Splash screen):
 --------------------------------------------------------------------------------
@@ -91,6 +106,7 @@ https://youtu.be/K_J8nj3DGVI
 
 Ovako sam napravio Launch screen na Krizi-u i na CombMe-u.
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Tutorijal za SwiftUI:
 ---------------------
 
@@ -98,12 +114,14 @@ https://www.hackingwithswift.com/articles/201/start-the-100-days-of-swiftui
 
 https://www.youtube.com/playlist?list=PLuoeXyslFTuZRi4q4VT6lZKxYbr7so1Mr
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Za resenje problema sa killed 9 - restartuj komp.
 A ako i posle toga ne mozes da add-ujes ili da commit-ujes fajlove na git, ona je resenje ovo:
                               rm .git/index.lock
 imas ovde odgovor:
 
 https://stackoverflow.com/questions/38004148/another-git-process-seems-to-be-running-in-this-repository
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Za dodavanje tajmera u ViewController koji ce okidati ucitavanje npr., mape, koristim ovo:
 
@@ -127,6 +145,7 @@ Za iskljucivanje tajmera kada view nije vise vidljiv koristim ovo:
  
  https://stackoverflow.com/questions/24007518/how-can-i-use-timer-formerly-nstimer-in-swift
  ---------------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------
 Za proveru da li je viewcontroller vodljiv ili ne, koristimo ovo:
 
 if someViewController.isOnScreen {
@@ -147,11 +166,13 @@ Vise o tome imam ovde:
 https://stackoverflow.com/questions/2777438/how-to-tell-if-uiviewcontrollers-view-is-visible
 
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Dobar resurs za ucenje:
 -----------------------
 
 https://www.hackingwithswift.com/example-code
 
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Linkovi za kalendar u Swift/iOS-u:
 ---------------------------------
@@ -170,11 +191,13 @@ https://github.com/vyasanirudh/AVCalendar#readme
 
 https://github.com/satishVekariya/SVCalendar
 ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Voma zanimljiv BottomNavigationTabBar, probaj ga napraviti:
 -----------------------------------------------------------
 
 https://iosexample.com/a-custom-tab-bar-with-amazing-animation/
 
+---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 
 
