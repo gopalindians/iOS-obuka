@@ -251,6 +251,26 @@ https://developers.google.com/places/ios-sdk/autocomplete#customize_text_and_bac
 
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+Metoda za pravljenje custom dugmeta na navigation bar-u:
+--------------------------------------------------------
+
+
+    // MARK: - Methods
+    func makeEditButtonOnNavigation() {
+        let customEditButton = UIBarButtonItem(image: Asset.editIcon.image,
+            style: .plain,
+            target: self,
+            action: #selector(openEdit))
+        customEditButton.tintColor = ColorName.purpleColor.color
+        customEditButton.imageInsets = UIEdgeInsets(top: 2, left: -8, bottom: 0, right: 0)
+        navigationItem.rightBarButtonItem = customEditButton
+    }
+
+
+Ovu metodu pozivam na kraju setupUI() metode kada se pokrene program, tj., klasa.
+To u okviru podfunkcije u kojoj se setupuju korisnicki podaci.Metoda za pravljenje custom dugmeta na navigation bar-u:
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 
 
