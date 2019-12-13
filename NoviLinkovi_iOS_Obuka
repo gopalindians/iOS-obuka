@@ -305,6 +305,7 @@ Ako mu das previse, zakucace.
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Za fontove najbolji tutoriujali su:
+----------------------------------
 
 https://www.youtube.com/watch?v=C4f7R2gUO8E
 
@@ -322,6 +323,13 @@ imenom ga trebas pozivati u kodu:
  Fontove u aplikaciji dodeljues kroz kod, na ovaj nacin:
  
  loginTitleLabel.font = UIFont(name: "Montserrat-Bold", size: 30.0)
+ 
+ Mada, ovako je najpravilnije pozivati u kodu:
+ 
+ loginTitleLabel.font = FontFamily.Montserrat.semiBold.font(size: 30.0)
+ 
+ Ovo je zgodno, zato sto mi SwiftGen izgenerise imena za FontFamily!!!
+ Tako smo radili na Krizi-u i na ComboMe projektu.
  
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
