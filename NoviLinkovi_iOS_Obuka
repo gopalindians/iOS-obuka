@@ -304,9 +304,27 @@ Samo preporucljivo je dati mu malo manju klicinu koda za konvertvanje.
 Ako mu das previse, zakucace.
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+Za fontove najbolji tutoriujali su:
+
+https://www.youtube.com/watch?v=C4f7R2gUO8E
+
+https://www.youtube.com/watch?v=-GlRHQIsDq0
 
 
+i kada instaliras font u aplikaciu , pomocu ove for petlje mozes proveriti kako ti se font zove i kak pod kojim
+imenom ga trebas pozivati u kodu:
 
+ for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            debugPrint("Family: \(family) Font names: \(names)")
+ }
+ 
+ Fontove u aplikaciji dodeljues kroz kod, na ovaj nacin:
+ 
+ loginTitleLabel.font = UIFont(name: "Montserrat-Bold", size: 30.0)
+ 
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 
 
