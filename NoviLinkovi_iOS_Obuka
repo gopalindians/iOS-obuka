@@ -340,6 +340,17 @@ https://iosexample.com/
 
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+Za dodavanje clear dugmeta na desnoj strani UITextField-a, koristis sledece:
+----------------------------------------------------------
+U View klasi datog ekrana, za zeljeni Outlet dodelis sledecu naredbu:
+
+updateYourNameTextField.inputTextField.clearButtonMode = UITextField.ViewMode.whileEditing
+
+To je objasnjeno ovde:
+
+https://stackoverflow.com/questions/320078/adding-the-clear-button-to-an-iphone-uitextfield
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 
 
