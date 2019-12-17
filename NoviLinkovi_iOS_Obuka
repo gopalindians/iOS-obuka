@@ -374,7 +374,13 @@ pravim ga ovako:
         return textField
     }()
 
+Ovo resenje sam nasao na sajtu:
+
+https://stackoverflow.com/questions/2934202/how-can-i-move-the-clear-button-in-a-uitextfield
+
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+
+
 
 
