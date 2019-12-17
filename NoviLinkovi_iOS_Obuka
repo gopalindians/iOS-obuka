@@ -351,9 +351,30 @@ To je objasnjeno ovde:
 https://stackoverflow.com/questions/320078/adding-the-clear-button-to-an-iphone-uitextfield
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+Ovo je resenje za pozicioniranje CLEAR dugmeta u UITextField-u:
+---------------------------------------------------------------
 
+class CustomTextField: UITextField {
 
+override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+    let originalRect = super.clearButtonRect(forBounds: bounds)
 
+    return originalRect.offsetBy(dx: -8, dy: 0)
+}
 
+Znaci da treba da napravim podklasu klase UITexField i u nju ubacim ovaj kod. A tamo gde pravim textfield, 
+pravim ga ovako:
+
+ lazy var inputTextField: CustomTextField = {
+        let textField = CustomTextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
+        textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        return textField
+    }()
+
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 
