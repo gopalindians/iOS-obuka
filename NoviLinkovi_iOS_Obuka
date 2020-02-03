@@ -473,6 +473,7 @@ class LoginView: IQPreviousNextView {
 .....
 }
 
+To je dobro resenje jer IQPreviousNextView nasledjuje UIView, pa se za moj krajni LoginView, nista zapravo ne menja.
 
 Ideja za resenje mi je potekla odavde:
 https://stackoverflow.com/questions/28993716/trouble-with-next-previous-buttons-with-iqkeyboardmanager
