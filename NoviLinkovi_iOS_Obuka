@@ -435,5 +435,47 @@ https://blog.usejournal.com/how-to-collapse-a-custom-header-view-in-ios-while-sc
 
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+Resenje za IQKeyboardManager:
+----------------------------
+Ako mi se na tastaturi ne pojavljuju one strelice gore-dole, kada koristim IQKeyboardManager, potrebno je da na 
+svaku UIVew klasu (LoginView, RegisterView, PrfileView, ... i tako dalje), stavim da mi nasledjuje IQPreviousNextView
+i za njuih importujem IQKeyboardManager.
+Na primer:
 
+
+import UIKit
+import SKCountryPicker
+import IQKeyboardManager
+
+class LoginView: IQPreviousNextView {
+
+    // MARK: - Outlets
+    @IBOutlet weak var loginBackgroundView: UIView!
+    @IBOutlet weak var loginTitleLabel: NavigationBarHeadlineLabel!
+    @IBOutlet weak var enterPhoneNumberOrEmailTextField: PhoneEmailInputTextField!
+    @IBOutlet weak var enterPasswordTextField: PasswordButtonInputTextField!
+    @IBOutlet weak var forgotPasswordLabel: BaseLayoutLabel!
+    @IBOutlet weak var loginButton: BaseButton!
+    @IBOutlet weak var createNewAccountTextView: UITextView!
+    @IBOutlet weak var orLoginLabel: BaseLayoutLabel!
+    @IBOutlet weak var loginWithFacebookButton: UIButton!
+    @IBOutlet weak var loginWithGoogleButton: UIButton!
+
+    // MARK: - Setup methods
+    func setupUI() {
+        backgroundColor = Asset.customBackgroundColor.color
+        loginBackgroundView.backgroundColor = Asset.customBackgroundColor.color
+        setupLabels()
+        setupButtons()
+        setupTextFields()
+        setCreateAccountTextView()
+    }
+.....
+}
+
+
+Ideja za resenje mi je potekla odavde:
+https://stackoverflow.com/questions/28993716/trouble-with-next-previous-buttons-with-iqkeyboardmanager
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
