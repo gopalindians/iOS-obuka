@@ -544,3 +544,39 @@ https://developer.apple.com/videos/play/wwdc2019/706/
 
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
+Primer za prolazak kroz niz objekata i pronalazenje indexa elemnta koji ima ispunjen uslov:  user.accountId == item.accountid
+
+
+
+@objc func profileUpdated(_ notification: Notification) {
++        
++        if let user = notification.object as? UserResponseObject {
++            debugPrint(user.userName)
++
++            for item in createdByDataSource {
++                if user.accountId == item.accountid {
++                    if let index = createdByDataSource.firstIndex(of: item) {
++                        createdByDataSource[index].displayName = user.userName
++                        createdByDataSource[index].email = user.email
++                        createdByDataSource[index].phoneNumber = user.phone
++                        createdByDataSource[index].photo = user.photoURL
++                        self.combDetailsView.createdByTable.reloadData()
++                    }
++                }
++            }
++
++            for item in assignedUsersDataSource {
++                if user.accountId == item.accountid {
++                    if let index = assignedUsersDataSource.firstIndex(of: item) {
++                        assignedUsersDataSource[index].name = user.userName
++                        assignedUsersDataSource[index].email = user.email
++                        assignedUsersDataSource[index].phoneNumber = user.phone
++                        assignedUsersDataSource[index].photo = user.photoURL
++                        self.combDetailsView.assignedToTable.reloadData()
++                    }
++                }
++            }
++        }
+     }
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
